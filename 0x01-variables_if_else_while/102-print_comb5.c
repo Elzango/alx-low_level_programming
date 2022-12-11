@@ -13,15 +13,14 @@ i = j = k = l = 48;
 while (l < 58)
 {
 	k = 48;
-	while (k < 48)
+	while (k < 58)
 	{
 		j = 48;
-		while (i < 58)
+		while (j < 58)
 		{
 			i = 48;
 			while (i < 58)
 			{
-				
 				m1 = (l * 10) + k;
 				m2 = (j * 10) + i;
 				if (m1 < m2)
@@ -41,7 +40,6 @@ while (l < 58)
 			j++;
 		}
 		k++;
-	
 	}
 	l++;
 }
