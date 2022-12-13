@@ -2,7 +2,7 @@
 /**
  * main - Checks alohabetic character.
  *
- * Returns: Always 0.
+ * Returns: Always 0 (Success)
  */
 int main(void)
 {

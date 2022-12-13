@@ -2,7 +2,7 @@
 /**
  * main - Prints the sign of a number.
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

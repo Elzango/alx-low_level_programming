@@ -2,7 +2,7 @@
 /**
  * abs - Computes the absolute value of a given number.
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int _abs(int n)
 {
