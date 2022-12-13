@@ -2,7 +2,9 @@
 /**
  * isalpha - Checks for alphabetic character.
  *
- * Return: Always 0 (Success)
+ * @c: The character in ASCII code
+ 
+ * Return: 1 for letters, 0 for the rest
  */
 int _isalpha(int c)
 {

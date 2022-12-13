@@ -3,7 +3,9 @@
 /**
  * Print to 98 - Print all natural numbers from n to 98 
  *
- * Return: Always 0 (Success)
+ *@n: input number
+
+ * Return: no return
  */
 void print_to_98(int n)
 {

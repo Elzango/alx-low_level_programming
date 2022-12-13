@@ -2,7 +2,7 @@
 /**
  * 9-times_table - Prints the 9-times table
  *
- * Return: Always 0 (Success)
+ * Return: no return
  */
 void times_table(void)
 {

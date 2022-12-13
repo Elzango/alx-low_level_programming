@@ -2,7 +2,7 @@
 /**
  * 24_hours - Prints every minute of a day in the format mm:ss
  *
- * Return: Always 0 (Success)
+ * Return: no return
  */
 void jack_bauer(void)
 {
