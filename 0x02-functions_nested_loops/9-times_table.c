@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * 9-times_table - Prints the 9-times table
+ * times_table - Prints the 9-times table
  *
  * Return: no return
  */
@@ -8,9 +8,9 @@ void times_table(void)
 {
 	int i, j, m1;
 
-	for (i = 0; i <=9; i++)
+	for (i = 0; i <=9 ; i++)
 	{
-		_putchar(44);
+		_putchar(48);
 		for (j = 1; j <= 9; j++)
 		{
 			m1 = i * j;
