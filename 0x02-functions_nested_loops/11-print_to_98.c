@@ -6,7 +6,7 @@
  * @n: input number
  *
  * Return: no retur
- */ 
+ */
 void print_to_98(int n)
 {
 	if (n > 98)
