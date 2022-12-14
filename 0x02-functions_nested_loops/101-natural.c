@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Computes and prints all natural numbers below 1024 that multiples of 3 and 5
+ * main - Computes and prints all natural numbers 
+ * below 1024 that multiples of 3 and 5
  *
  * Return: Always 0 (Success)
  *
