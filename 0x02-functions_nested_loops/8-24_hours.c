@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * 24_hours - Prints every minute of a day in the format mm:ss
+ * jack_bauer - Prints every minute of a day in the format mm:ss
  *
  * Return: no return
  */
