@@ -5,16 +5,13 @@
  * @head: The head of the given linked list
  * Return: no return
  */
-void free_listint2(listint_t **head)
+void free_listint(listint_t *head)
 {
-	listint_t *ptr;
+	listint_t *temp;
 
-	ptr = *head;
-	while (ptr != NULL)
+	while ((temp = head) != NULL)
 	{
-		listint_t *next = ptr->next;
-		free(ptr);
-		ptr = next;
+		head = head->next;
+		free(temp);
 	}
-	*head = NULL;
 }
