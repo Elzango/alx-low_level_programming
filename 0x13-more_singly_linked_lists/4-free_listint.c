@@ -1,9 +1,10 @@
 #include "lists.h"
-#include <stdlib.h>
+
 /**
- * free_listint - Frees the dynamic memory allocated to a given node in a given linked list
- * @head: The head of the guven linked list
- * Return: no return
+ * free_listint - frees a linked list
+ * @head: head of a list.
+ *
+ * Return: no return.
  */
 void free_listint(listint_t *head)
 {
