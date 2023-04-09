@@ -1,13 +1,12 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "hash_tables.h"
 
 /**
- * 0-hash_table_create - creates a new hash table
+ * hash_table_create - creates a new hash table
  * @size: The size of the array
  * Return: A pointer to the new hash table or NULL if in case of failure
  */
-hash_table_t *hash_table(unsigned long int size)
+
+hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_table = NULL;
 	hash_node_t **array = NULL;

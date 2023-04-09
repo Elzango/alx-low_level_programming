@@ -1,52 +1,49 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - Add or update an element in a hash table.
- * @ht: A pointer to the hash table.
- * @key: The key to add - cannot be an empty string.
- * @value: The value associated with key.
+ * hash_table_set - Add or update an element to the hash table
+ * @ht: A pointer to the hash table
+ * @key: The key to add or update - cannot be an empty string.
+ * @value: The value string to associate with the key
  *
- * Return: Upon failure - 0.
- *         Otherwise - 1.
+ * Return: 1 if successful, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new;
-	char *value_copy;
-	unsigned long int index, i;
+	unsigned long int index;
+	hash_node_t *new_node, *cur_node;
 
-	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
 
-	value_copy = strdup(value);
-	if (value_copy == NULL)
+	/* Get the index at which the key/value pair should be stored in the array */
+	index = key_index((unsigned char *)key, ht->size);
+
+	/* allocate memory for a new hash node */
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
 		return (0);
 
-	index = key_index((const unsigned char *)key, ht->size);
-	for (i = index; ht->array[i]; i++)
+	/* duplicate the key string and store them in the new hash node */
+	new_node->key = strdup(key);
+	if (new_node->key == NULL)
 	{
-		if (strcmp(ht->array[i]->key, key) == 0)
-		{
-			free(ht->array[i]->value);
-			ht->array[i]->value = value_copy;
-			return (1);
-		}
-	}
-
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
-	{
-		free(value_copy);
+		free(new_node);
 		return (0);
 	}
-	new->key = strdup(key);
-	if (new->key == NULL)
+	
+	new_node->value = strdup(value);
+	if (new_node->value == NULL)
 	{
-		free(new);
+		free(new_node->key);
+		free(new_node);
+
 		return (0);
 	}
-	new->value = value_copy;
-	new->next = ht->array[index];
-	ht->array[index] = new;
+
+	/* insert the new node at beginning of the linked list at the calculated index */
+	cur_node = ht->array[index];
+	ht->array[index] = new_node;
+	new_node->next = cur_node;
 
 	return (1);
 }
